@@ -1,0 +1,786 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myIntro;
+    src: url(fonts/OldschoolTag.ttf);
+}
+
+@font-face {
+    font-family: myName;
+    src: url(fonts/impact.ttf);
+}
+
+@font-face {
+    font-family: myText;
+    src: url(fonts/patrick.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #d7d7d7;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+.grid-section {
+    position: relative;
+    /* Ensure that the button is positioned relative to the section */
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Landing Page Grid Layout */
+.landing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 equal columns */
+    grid-template-rows: auto 1fr auto;
+    /* Rows for item 4, 3 middle items, and item 5 */
+
+    width: 100%;
+    height: 100vh;
+    /* Adjusting the grid height */
+}
+
+.landing-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* LOGO*/
+/*-------------------------------------------------------------------------------------------------*/
+#item4 img {
+    display: block;
+    margin: 5px;
+    height: 50px;
+}
+
+#clockdate {
+    position: absolute;
+    right: 10px;
+}
+
+#clockdate .clockdate-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Align text to the right */
+}
+
+.clockdate-wrapper {
+
+    max-width: 350px;
+    width: 100%;
+    text-align: right;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+#clock {
+
+    font-family: sans-serif;
+    font-size: 20px;
+    text-shadow: 0px 0px 1px #000000;
+    color: #000000;
+}
+
+#clock span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 50px;
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
+
+#date {
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    color: #000000;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*INTRODUCTION*/
+/*-------------------------------------------------------------------------------------------------*/
+/* Background colors for the other items */
+#item1 {
+    display: flex;
+    color: #000000;
+    margin-left: 15%;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: top;
+    /* Center items vertically */
+    align-items: start;
+    /* Center items horizontally */
+    z-index: 1;
+
+}
+
+/* Styling for the "Hello I'm" text */
+#item1 .greeting {
+    font-family: myIntro;
+    /* Use your custom font */
+    font-size: 3rem;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+/* Styling for the "My Name" text */
+#item1 .name {
+    font-family: myName;
+    background-color: #F9B233;
+    padding: 10px;
+    white-space: nowrap;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    /* Set the size you want */
+    margin-top: -10px;
+    /* Add some space between the lines */
+}
+
+#item1 .intro {
+
+    margin-right: 30%;
+    margin-top: 5%;
+    font-family: myText;
+    font-size: 1rem;
+    white-space: wrap;
+    text-align: justify;
+}
+
+/* Container to hold the buttons side by side */
+#item1 .button-container {
+    display: flex;
+    /* Use flexbox to place buttons side by side */
+    justify-content: center;
+    /* Center the buttons */
+    margin-top: 20px;
+    gap: 30px;
+    /* Add space between the buttons */
+}
+
+/* Button styling to make the text overflow the button borders */
+#item1 .custom-button {
+    background-color: #F9B233;
+    /* Button background color */
+    color: #ffffff;
+    font-family: myText;
+    /* Text color */
+    padding: 10px 10px;
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Larger font size to make text overflow */
+    line-height: 1.2;
+    /* Adjust line height to control overflow */
+    cursor: pointer;
+    /* Show pointer on hover */
+    text-decoration: none;
+    /* Remove underline from link */
+    text-align: center;
+    /* Center the text inside the button */
+    overflow: visible;
+    /* Allow text to overflow */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    position: relative;
+    /* Required for positioning overflow text */
+    display: inline-block;
+    /* Keep buttons inline */
+    z-index: 1;
+    /* Ensure text appears above background */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+#item1 .custom-button:hover {
+    background-color: #FF8C00;
+    /* Change background color on hover */
+}
+
+/* Additional styles to create visual overflow effect */
+#item1 .custom-button::before {
+    content: attr(name);
+    /* Duplicate the button text */
+    color: #000000;
+    font-family: myIntro;
+    position: absolute;
+    /* Position it outside the button */
+    top: 50px;
+    /* Adjust position to appear outside */
+    left: 70px;
+    font-size: 20px;
+    /* Match font size to button text */
+    white-space: nowrap;
+    /* Ensure no wrapping */
+    opacity: 1;
+    /* Transparent for subtle overflow effect */
+    z-index: -1;
+    /* Place behind the button */
+    pointer-events: none;
+    /* Disable interaction */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*IMAGE*/
+/*-------------------------------------------------------------------------------------------------*/
+/* Styling for the image in Item 2 */
+#item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#item2 img {
+
+    max-width: 100%;
+    max-height: 100%;
+    /* Ensure the image doesn't overflow the container */
+    object-fit: contain;
+    /* Maintain the aspect ratio of the image */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*CONTENT*/
+/*-------------------------------------------------------------------------------------------------*/
+/* New styles for the vertical items inside item3 */
+.vertical-items {
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: space-around;
+    /* Evenly space them vertically */
+    height: 100%;
+    /* Take up full height of item3 */
+    width: 100%;
+    text-align: left;
+    /* Center the text */
+}
+
+.vertical-item {
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    /* Adjust the font size */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+#item4 {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    overflow: hidden;
+    border-bottom-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Overlay content for item3 */
+#item3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+    /* Ensure it's above item2 */
+}
+
+#item3 .overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    text-align: right;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Social media icons styling */
+#subitem3 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    color: #F9B233;
+    font-size: 2rem;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e9a226;
+}
+
+/* Add styles for the social media icons */
+#item3 .social-icon {
+    color: #F9B233;
+    font-size: 2rem;
+    /* Larger icon size */
+    margin: 10px 0;
+    /* Space between icons */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth color change on hover */
+}
+
+#item3 .social-icon:hover {
+    color: #e9a226;
+    /* Change color on hover */
+}
+
+/* Vertical alignment of social icons */
+#item3 .vertical-items {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-end;
+    /* Center align the items */
+    height: 100%;
+    /* Full height of the container */
+}
+
+#item3 .vertical-item {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    /* Adjust the font size for other items */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Container for Sub Item 1 */
+#subitem1 {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: flex-start;
+    /* Align content to the top */
+    height: 100%;
+    /* Full height of the parent container */
+    flex-direction: column;
+    /* Stack elements vertically */
+    z-index: 1;
+}
+
+/* Updated styling for the vertical list */
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between each word */
+    z-index: 3;
+}
+
+/* Style for each horizontal word with arrows aligned to the right */
+.horizontal-word {
+    display: flex;
+    justify-content: space-between;
+    /* Space out text and arrow */
+    align-items: center;
+    /* Center align text and icon vertically */
+    font-size: 2rem;
+    /* Font size */
+    font-family: myIntro;
+    /* Font family */
+    color: #F9B233;
+    /* Text color */
+    width: 100%;
+    /* Take up full width */
+    margin-right: 20px;
+}
+
+/* Styling for the arrow icon */
+.horizontal-word i {
+    margin-left: 10px;
+    /* Space between text and arrow icon */
+    font-size: 1.5rem;
+    /* Arrow icon size */
+    color: #F9B233;
+    /* Arrow color */
+    margin-right: 30px;
+    /* Remove any additional margin on the right */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*INTRODUCTION*/
+/*-------------------------------------------------------------------------------------------------*/
+/* Other section colors */
+#introduction {
+    background-color: #d7d7d7;
+   
+}
+
+/* Grid layout for Introduction section */
+.introduction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    /* Two columns: left 2x the width of the right */
+    height: 100%;
+    width: 100%;
+
+}
+.column-center-intro{
+    font-weight: bold;
+    font-family: myText;
+    text-align: justify;
+    margin-left: -30px;
+    padding: 20px;
+}
+
+/* Left column styling */
+.column-left {
+    margin-left: 40px;
+    text-align: start;
+    font-family: myName;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.column-left h1 {
+    padding-left: 40px;
+    font-size: 5rem;
+}
+
+/* Right column styling */
+.column-right {
+    text-align: start;
+    font-family: myText;
+    margin: 55px 50px 0px 0px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.column-right p {
+    
+    text-align: justify;
+    column-count: 2;
+    column-gap: 30px;
+}
+
+
+/* Style for the entire grid section to fill screen height */
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*DIARY*/
+/*-------------------------------------------------------------------------------------------------*/
+
+.grid-content {
+    display: grid;
+    margin-top: 50px;
+
+    grid-template-columns: 1fr 2fr 2fr;
+    /* Two columns: left 2x the width of the right */
+    height: 100%;
+    width: 100%;
+}
+
+.column-center{
+    text-align:justify;
+    font-family: myText;
+    margin: 0px -80px 0px 40px;
+    padding: 20px;
+}
+
+.column-right-calendar {
+    
+    text-align: start;
+    
+    font-family: myText;
+    margin: -10px 30px 0px 50px;
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.calendar-container {
+    
+    width: 80vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 5px 0;
+    background-color: #eee;
+  }
+  
+  .weekdays div {
+    font-weight: bold;
+    padding: 5px 0;
+  }
+  
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0px;
+    background-color: #fff;
+  }
+  
+  .days-grid div {
+    height: 70px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-size: 18px;
+  }
+  
+  .days-grid div.empty {
+    background-color: #f0f0f0;
+  }
+  
+  .days-grid div.today {
+    background-color: #ffeb3b;
+  }
+
+  /* Modal styles */
+/* Calendar navigation arrows */
+.month-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    color: #F9B233;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .popup-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px auto;
+  }
+  
+  /* Modal navigation arrows */
+  .modal-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #F9B233;
+  }
+  
+  .modal-left-arrow {
+    left: 10px;
+  }
+  
+  .modal-right-arrow {
+    right: 10px;
+  }
+  
+  ul {
+    text-align: left;
+    padding: 0;
+    list-style-position: inside;
+  }
+
+/*-------------------------------------------------------------------------------------------------*/
+/*WORK*/
+/*-------------------------------------------------------------------------------------------------*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 70%;
+    padding: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*-------------------------------------------------------------------------------------------------*/
+#evaluation {
+    background-color: #9633ff;
+    /* Pink */
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Style for the copyright text */
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Align to the left */
+    transform: rotate(-90deg);
+    /* Rotate 90 degrees counterclockwise */
+    transform-origin: left bottom;
+    /* Set the origin for rotation */
+    font-size: 0.7rem;
+    color: #33333355;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+/* Position the back-to-top button at the bottom right of the section */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust this value for more or less spacing from the bottom */
+    right: 20px;
+    /* Adjust this value for more or less spacing from the right */
+    font-size: 1.5rem;
+    color: #F9B233;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #F9B233;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top-button:hover {
+    background-color: #F9B233;
+    color: #ffffff;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+

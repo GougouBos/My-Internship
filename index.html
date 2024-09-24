@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Grid Sections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="startTime()">
+    <section id="landing-page" class="grid-section">
+        <div class="landing-grid">
+            <div class="landing-item" id="item4">
+                <img src="images/LOGO.png" alt="Centered Image">
+                <div id="clockdate">
+                    <div class="clockdate-wrapper">
+                        <div id="clock"></div>
+                        <div id="date"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="landing-item" id="item1">
+                <div class="greeting">Hello, I'm</div>
+                <div class="name">Gulnara BOSKOV</div>
+                <div class="intro">
+                    I am an architecture student at the University of Hasselt (Belgium) with a global perspective,
+                    integrating diverse design interests.
+                    Join me behind the scenes of my journey at the Belgian Embassy in Washington DC,
+                    where I merged my architecture knowledge with international diplomacy.
+                    During the summer of 2024, I gained hands-on experience exploring how design can shape embassy
+                    spaces, influence security, and enhance functionality. </div>
+                <div class="button-container">
+                    <a href="pdfs/portfolio.pdf" download="Gulnara_BOSKOV_Portfolio" class="custom-button">my Resume</a>
+                </div>
+            </div>
+            <div class="landing-item" id="item2">
+                <img src="images/ME8.png" alt="Centered Image">
+            </div>
+            <div class="landing-item" id="item3">
+                <div class="overlay-content">
+                    <div id="subitem1">
+                        <div class="vertical-list">
+                            <span class="horizontal-word">Introduction
+                                <a href="#introduction"><i class="fas fa-arrow-right"></i></a>
+                            </span>
+                            <span class="horizontal-word">my traveljournal
+                                <a href="#diary"><i class="fas fa-arrow-right"></i></a>
+                            </span>
+                            <span class="horizontal-word">my work
+                                <a href="#work"><i class="fas fa-arrow-right"></i></a>
+                            </span>
+                            <span class="horizontal-word">Evaluation
+                                <a href="#evaluation"><i class="fas fa-arrow-right"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="subitem3">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
+                                class="fab fa-facebook-messenger"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="grid-section">
+        <div class="introduction-grid">
+            <div class="column-left">
+                <h1>01</h1>
+            </div>
+            <div class="column-center-intro">
+                <h1 style="color: #F9B233; font-size: 30px; font-family: myIntro;">introduction</h1>
+                <p>
+                    <br> During my internship at the Belgian Embassy in Washington, DC, I discovered how architecture
+                    can embody diplomacy.
+                    The embassy, with its blend of Belgian and American elements, reflects both security and cultural
+                    identity,
+                    which inspired me deeply. When I was invited to work on a preliminary design for a new embassy
+                    office,
+                    I saw it as a chance to fuse my architectural knowledge with my understanding of these two cultures.
+                    I aimed to create a space that not only served its purpose but also symbolized the dynamic
+                    relationship between Belgium and the U.S.
+                </p>
+            </div>
+            <div class="column-right">
+                <p style="font-family: myText;">I specifically chose the Belgian Embassy because of
+                    its strategic location at the center of global diplomacy.
+                    It was exciting to be in a place where high-level political discussions and international
+                    interactions happen regularly.
+                    As an architecture student, I was curious about how the design of such a critical building can
+                    support
+                    both its diplomatic role and the practical demands of security.
+                    The Belgian Embassy provided an excellent case study for this, showing how architecture can
+                    adapt to complex
+                    environments while still making a powerful statement.
+                    <br> One of the most interesting aspects for me was seeing how the embassy’s design
+                    navigates the cultural differences between
+                    Europe and the U.S.
+                    This mix of influences is something I really wanted to explore, as it shapes how the embassy
+                    conveys Belgium’s identity to the world.
+                    The embassy isn’t just about diplomacy; it’s a hub for promoting Belgium’s interests,
+                    whether through economic partnerships or cultural exchanges. It has to be a bridge between two
+                    very different places,
+                    projecting openness and hospitality while maintaining tight security.
+                    My experience at the embassy, and especially the opportunity to work on this project, gave me a
+                    deeper understanding of
+                    how architecture can support and enhance diplomatic efforts.
+                    It’s more than just creating a functional space; it’s about telling a story and facilitating
+                    connections.
+                    Through this architectural project, I got to contribute to that narrative, merging Belgian and
+                    American elements in a way that celebrates both cultures.
+                    It was a unique chance to apply what I’ve learned and create something that reflects the
+                    embassy’s mission and vision for the future.</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Diary Section -->
+    <section id="diary" class="grid-section">
+        <div class="grid-content">
+            <div class="column-left">
+                <h1>02</h1>
+            </div>
+            <div class="column-center">
+                <h1 style="color: #F9B233; font-size: 30px; font-family: myIntro;">travel journal</h1>
+                <p><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, distinctio quae asperiores
+                    placeat numquam, atque quos eos facilis laboriosam soluta similique, delectus possimus dicta. Vel
+                    quisquam ipsa aperiam doloremque animi!</p>
+            </div>
+            <div class="column-right-calendar">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <span class="month-arrow left-arrow">&#9664;</span>
+                        <span class="month-year" id="month-year">July 2024</span>
+                        <span class="month-arrow right-arrow">&#9654;</span>
+                    </div>
+
+                    <div class="weekdays">
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THU</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                        <div>SUN</div>
+                    </div>
+
+                    <div class="days-grid" id="days-grid">
+                        <!-- Days will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Modal for displaying the full date, image, and bullet list -->
+                <div id="date-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="modal-arrow modal-left-arrow">&#9664;</span>
+                        <span class="modal-arrow modal-right-arrow">&#9654;</span>
+                        <span class="close">&times;</span>
+                        <p id="weekday"></p>
+                        <p id="full-date"></p>
+                        <img src="https://via.placeholder.com/200" id="popup-image" alt="Popup Image"
+                            class="popup-image">
+                        <ul id="popup-list">
+                            <li>Bullet point 1</li>
+                            <li>Bullet point 2</li>
+                            <li>Bullet point 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <script src="script.js"></script>
+            </div>
+            <div class="copyright">© 2024 Gulnara Boskov. All rights reserved.</div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="grid-section">
+        <div class="grid-content">
+            <div class="column-left">
+                <h1>03</h1>
+            </div>
+            <div class="column-right-calendar">
+                <div class="slideshow-container">
+
+                    <!-- Slide 1 -->
+                    <div class="mySlides">
+                        <div class="row">
+                            <div class="column description">
+                                <h2>Slide 1 Title</h2>
+                                <p>This is the description for slide 1.</p>
+                            </div>
+                            <div class="column image">
+                                <img src="https://via.placeholder.com/600" alt="Slide 1 Image">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Slide 2 -->
+                    <div class="mySlides">
+                        <div class="row">
+                            <div class="column description">
+                                <h2>Slide 2 Title</h2>
+                                <p>This is the description for slide 2.</p>
+                            </div>
+                            <div class="column image">
+                                <img src="https://via.placeholder.com/600" alt="Slide 2 Image">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Navigation Arrows -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                
+                <script src="script.js"></script>
+            </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation" class="grid-section">
+        <div class="grid-content">
+            <h1>Evaluation</h1>
+            <a href="#landing-page" class="back-to-top-button"><i class="fas fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">© 2024 Gulnara Boskov. All rights reserved.</div>
+    </section>
+
+    <!-- JavaScript for updating time and date -->
+    <script>
+        function startTime() {
+            var today = new Date();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            hr = (hr == 0) ? 12 : hr;
+
+            hr = checkTime(hr);
+            min = checkTime(min);
+            sec = checkTime(sec);
+            document.getElementById("clock").innerHTML = hr + ":" + min;
+
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            var curWeekDay = days[today.getDay()];
+            var curDay = today.getDate();
+            var curMonth = months[today.getMonth()];
+            var curYear = today.getFullYear();
+            var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
+            document.getElementById("date").innerHTML = date;
+
+            var time = setTimeout(function () { startTime() }, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+
+</body>
+
+</html>
